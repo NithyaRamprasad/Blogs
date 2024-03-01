@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 a{
+  color: #847ed9;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #847ed9;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #847ed9;
+  margin-bottom: 8px;
+}
+.blog-preview a{
+  text-decoration: none;
+}
+.blog-preview button,.navbar button {
+  background: #847ed9;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  margin-top: -7%;
+}
+
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #847ed9;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+  border: 1px solid #b1afaf;
+  border-radius: 10px;
+  padding: 3%;
+}
+.blog-details p {
+  font-weight: bold;
+  text-align: end;
+  margin-right: 3%;
+}
+.blog-details button {
+  background: #847ed9;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #847ed9;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #847ed9;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* create new blog form */
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.login label {
+  text-align: left;
+  display: block;
+}
+.login h2 {
+  font-size: 20px;
+  color: #847ed9;
+  margin-bottom: 30px;
+}
+.login input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  background: #847ed9;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.redirecttext{
+  font-size: 15px;
+  color: #847ed9;
+  margin: 30px;
+}
+.errorMsg{
+  font-size: 15px;
+  color: red;
+  margin-bottom: 30px;
+}
+
+/* footer */
+.footer{
+  background-color : #d9d7f1; 
+  position: fixed;
+  bottom: 0px;
+  left : 0px;
+  right: 0px;
+  display : flex;
+  border-top : 1px solid #f2f2f2;
+}
