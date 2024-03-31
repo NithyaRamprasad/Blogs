@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import useFetch from './useFetch';
 import App from './App';
 import CreateUser from './CreateUser'
-import { login, logout } from './Redux/Users/userSlice'
+import { login } from './Redux/Users/userSlice'
 import { useSelector, useDispatch } from 'react-redux';
 
 export const UserContext = React.createContext();
 
 const Login = () =>{
     const isUserValid = useSelector(state => state.isUserValid);
-    console.log(localStorage);
     const dispatch = useDispatch();
     const [username,setUserName] = useState('');
     const [password,setPassword] = useState('');
@@ -28,10 +27,6 @@ const Login = () =>{
         else{
             setErrorMsg('*Username or Password is wrong, please try again!');
         }
-    }
-
-    const handleLogout = () => {
-        dispatch(logout());
     }
 
     const handleCreateAccount = () => {
@@ -65,7 +60,7 @@ const Login = () =>{
             {iscreateUser && <h4 className='redirecttext' onClick={() => setIsCreateUser(false)}>Already have an account? Login</h4>}
             </div>
             <UserContext.Provider value={[username,setUserName]}>
-                {isUserValid && <App updateLoginStatus = {handleLogout}/>}
+                {isUserValid && <App/>}
             </UserContext.Provider>
         </div>
     );

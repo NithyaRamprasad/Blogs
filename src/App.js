@@ -6,11 +6,11 @@ import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import Footer from './Footer';
 
-function App({updateLoginStatus}) {
+function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar updateLoginStatus = {updateLoginStatus}/>
+        <Navbar/>
         <div className="content">
           <Switch>
             <Route exact path="/">

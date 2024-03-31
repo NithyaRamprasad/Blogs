@@ -1,9 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./Login";
+import { logout } from './Redux/Users/userSlice'
+import { useDispatch } from 'react-redux';
 
-const NavBar = ({updateLoginStatus}) =>{
+const NavBar = () =>{
     const [username,setUserName] = useContext(UserContext);
+
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(logout());
+    }
 
     return (
         <nav className="navbar">
@@ -12,7 +20,7 @@ const NavBar = ({updateLoginStatus}) =>{
                 <Link to="/">Home</Link>
                 <Link to="/create">New Blog</Link>
                 <span  style={{margin : "16px"}}><strong>User : {username}</strong></span>
-                <button onClick={updateLoginStatus} style={{margin : "1px"}}>Logout</button>
+                <button onClick={handleLogout} style={{margin : "1px"}}>Logout</button>
             </div>
         </nav>
     );
