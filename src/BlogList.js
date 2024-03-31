@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { UserContext } from "./Login";
 
 const BlogList = ({blogs}) =>{
+    const [username,setUserName] = useContext(UserContext);
+
     const [searchText,setSearch] = useState('');
 
     const handleDelete = (id) => {
@@ -29,7 +32,7 @@ const BlogList = ({blogs}) =>{
                             <p>{item.body.substring(0, 70)}...</p>
                             <p>Written By : {item.author}</p>
                         </Link>
-                        {sessionStorage.getItem('userName') === item.author && <button onClick={() => handleDelete(item.id)}>Delete</button>}
+                        {username === item.author && <button onClick={() => handleDelete(item.id)}>Delete</button>}
                     </div>
                 }
                 </div>

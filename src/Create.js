@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { UserContext } from "./Login";
 
 const Create = () =>{
+    const [username,setUserName] = useContext(UserContext);
+
     const [title,setTitle] = useState('');
     const [body,setBody] = useState('');
-    const [author,setAuthor] = useState(sessionStorage.getItem('userName'));
+    const [author,setAuthor] = useState(username);
     const [isLoading,setLoading] = useState(false);
     const history = useHistory();
 
